@@ -1,0 +1,31 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+#formHolder{
+	height: 300px;
+	width: 49%;
+	display: inline-block;
+	vertical-align: top;
+}
+#cardHolder{
+	height: 300px;
+	width: 49%;
+	display: inline-block;
+	text-align: center;
+}
+.card{
+	background-color: #fff8dc;
+	border: 2px solid black;
+	/*height: 30px;*/
+	width: 90%;
+	border-radius: 4px;
+	margin: 10px;
+}
+.card p{
+	display: none;
+	text-align: left;
+}
+.dscpSbmt{
+	padding: 30px;
+}
