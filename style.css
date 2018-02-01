@@ -40,6 +40,9 @@ h1:after {
 h1{
 	text-align: left;
 }
+h2{
+	font-size: 40px;
+}
 body{
 	padding: 10px;
 }
