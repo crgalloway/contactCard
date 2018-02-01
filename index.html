@@ -10,7 +10,7 @@
 		$(document).ready(function(){
 			$("form").submit(function(){
 				if(($('#firstName').val().length > 0) && ($('#lastName').val().length > 0)){
-				$("#cardHolder").append('<div class="card"><h1>'+$('#firstName').val()+' '+$('#lastName').val()+'</h1><h3>Click here for description</h3><p>'+$('#Description').val()+'</p></div>');
+				$("#cardHolder").append('<div class="card"><h2>'+$('#firstName').val()+' '+$('#lastName').val()+'</h2><h3>Click here for description</h3><p>'+$('#Description').val()+'</p></div>');
 				$("input[type=text], textarea").val("");}
 				return false;
 			})
