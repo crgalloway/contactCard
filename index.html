@@ -4,17 +4,18 @@
 	<title>Contact Card</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 	<script>
 		$(document).ready(function(){
 			$("form").submit(function(){
+				if(($('#firstName').val().length > 0) && ($('#lastName').val().length > 0)){
 				$("#cardHolder").append('<div class="card"><h1>'+$('#firstName').val()+' '+$('#lastName').val()+'</h1><h3>Click here for description</h3><p>'+$('#Description').val()+'</p></div>');
-				$("input[type=text], textarea").val("");
+				$("input[type=text], textarea").val("");}
 				return false;
 			})
 		});
 		$(document).on('click', '.card', function(){
-			$(this).children().toggle("clip")
+			$(this).children().toggle("clip");
 		})
 	</script>
 </head>
@@ -23,22 +24,27 @@
 		<div id=formHolder>
 			<h1>Enter User Information</h1>
 			<form>
-				<div class="dscpSbmt">
-					<p>First Name:</p>
-					<input id="firstName" type="text" name="firstName">
-					<br>
-					<p>Last Name:</p>
-					<input id="lastName" type="text" name="lastName">
-				</div>				
+				<table class="dscpSbmt">
+					<tr>
+						<td> <p>First Name:</p></td>
+						<td><input id="firstName" type="text" name="first_name"></td>
+					</tr>
+					<tr>
+						<td><p>Last Name:</p></td>
+						<td><input id="lastName" type="text" name="last_name"></td>
+					</tr>
+				</table>		
 				<div class="dscpSbmt">
 					<p>Description:</p>
-					<textarea id="Description"></textarea>
+					<textarea id="Description" placeholder="Enter description" rows="5" cols="30"></textarea>
 					<br>
 					<input type="submit" name="submit" value="Add User">
 				</div>
 			</form>
 		</div>
-		<div id=cardHolder></div>
+		<div id=cardHolder>
+			<h1>Contact Cards</h1>
+		</div>
 	</div>
 </body>
 </html>
